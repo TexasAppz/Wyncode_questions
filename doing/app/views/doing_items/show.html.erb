@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @doing_item.title %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @doing_item.deadline %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @doing_item.priority %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @doing_item.complete %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @doing_item.description %>
+</p>
+
+<%= link_to 'Edit', edit_doing_item_path(@doing_item) %> |
+<%= link_to 'Back', doing_items_path %>

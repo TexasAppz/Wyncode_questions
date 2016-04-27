@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Doing Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Deadline</th>
+      <th>Priority</th>
+      <th>Complete</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doing_items.each do |doing_item| %>
+      <tr>
+        <td><%= doing_item.title %></td>
+        <td><%= doing_item.deadline %></td>
+        <td><%= doing_item.priority %></td>
+        <td><%= doing_item.complete %></td>
+        <td><%= doing_item.description %></td>
+        <td><%= link_to 'Show', doing_item %></td>
+        <td><%= link_to 'Edit', edit_doing_item_path(doing_item) %></td>
+        <td><%= link_to 'Destroy', doing_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Doing item', new_doing_item_path %>
